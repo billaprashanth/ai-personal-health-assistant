@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from backend.routers import symptom_checker, reminder, chatbot, faqbot
+from routers import symptom_checker, reminder, chatbot, faqbot
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -7,7 +7,7 @@ app = FastAPI(title="AI Personal Health Assistant")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

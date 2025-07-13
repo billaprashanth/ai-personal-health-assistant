@@ -16,7 +16,7 @@ const ReminderSystem = () => {
     const time = new Date(datetime).toTimeString().slice(0, 5); // "HH:MM"
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/reminders", {
+      const res = await axios.post("https://ai-personal-health-assistant.onrender.com/reminders", {
         medicine_name: medicineName,
         time: time,
       });

@@ -11,7 +11,7 @@ const ReminderViewer = () => {
 
   const fetchReminders = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/get/reminder");
+      const res = await axios.get("https://ai-personal-health-assistant.onrender.com/get/reminder");
       setReminders(res.data);
     } catch (err) {
       console.error("Fetch error", err);
@@ -24,7 +24,7 @@ const ReminderViewer = () => {
 
   const handleDelete = async (name, time) => {
     try {
-      await axios.delete(`http://localhost:8000/reminders/${name}/${time}`);
+      await axios.delete(`https://ai-personal-health-assistant.onrender.com/reminders/${name}/${time}`);
       fetchReminders();
     } catch (err) {
       console.error("Delete error", err);
@@ -40,7 +40,7 @@ const ReminderViewer = () => {
     try {
       const { medicine_name, time } = reminders[editingIndex];
       await axios.patch(
-        `http://localhost:8000/reminders/${medicine_name}/${time}`,
+        `https://ai-personal-health-assistant.onrender.com/reminders/${medicine_name}/${time}`,
         editData
       );
       setEditingIndex(null);

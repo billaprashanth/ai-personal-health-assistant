@@ -21,7 +21,7 @@ const FAQViewer = () => {
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/faq/all");
+        const res = await axios.get("https://ai-personal-health-assistant.onrender.com/faq/all");
         const shuffled = shuffleArray(res.data.faqs);
         setFaqs(shuffled.slice(0, 5)); // random 5
       } catch (err) {

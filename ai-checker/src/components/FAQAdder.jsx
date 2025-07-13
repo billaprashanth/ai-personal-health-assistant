@@ -10,7 +10,7 @@ const FAQAdder = () => {
   const handleAddFaq = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8000/faq/add", {
+      const res = await axios.post("https://ai-personal-health-assistant.onrender.com/faq/add", {
         question,
         answer,
       });

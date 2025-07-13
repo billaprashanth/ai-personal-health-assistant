@@ -6,7 +6,7 @@ const SymptomChecker = () => {
 
   const handleCheck = async () => {
     try {
-      const res = await axios.post("http://localhost:8000/predict/", {
+      const res = await axios.post("https://ai-personal-health-assistant.onrender.com/predict/", { // "http://localhost:8000/predict/"
         symptoms: symptoms.split(","),
       });
       setResult(res.data.predicted_disease);

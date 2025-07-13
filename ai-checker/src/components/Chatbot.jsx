@@ -14,7 +14,7 @@ const Chatbot = () => {
     setQuestion("");
 
     try {
-      const res = await axios.post("http://localhost:8000/chat/", {
+      const res = await axios.post("https://ai-personal-health-assistant.onrender.com/chat/", {  // "http://localhost:8000/chat/"
         question,
       });
 
