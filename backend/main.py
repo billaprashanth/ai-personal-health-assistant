@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import symptom_checker, reminder, chatbot, faqbot
+from backend.routers import symptom_checker, reminder, chatbot, faqbot
 from fastapi.middleware.cors import CORSMiddleware
 
 
